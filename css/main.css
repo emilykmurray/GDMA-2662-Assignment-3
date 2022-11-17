@@ -35,6 +35,7 @@
         -ms-box-sizing: border-box;
         -webkit-box-sizing: border-box;
         box-sizing: border-box;
+        font-weight: 400;
 }
 
 /*--------------------------------------------------------------
@@ -46,6 +47,17 @@
 h1 {
     color: #fff;
     text-align: center;
+}
+
+h1, 
+h2,
+p {
+    font-family: 'EB Garamond', serif;
+}
+
+h3 {
+    font-family: 'Montserrant', sans-serif;
+    text-transform: uppercase;
 }
 
 a,
@@ -228,12 +240,20 @@ a:hover {
     6.0 - COMPONENTS
 -------------------------------------------------------------- */
 
-.bg-light-green {
-    background-color: #4E9374;
+
+#conservation {
+    text-align: center;
+    margin: 0 auto;
 }
 
-footer {
-    background-color: #20734C;
+#conservation > section {
+    margin: 0 auto;
+}
+
+/* ----- HERO ----- */
+
+#home span {
+    font-style: italic;
 }
 
 /* ----- NAVIGATION ----- */
@@ -259,6 +279,14 @@ footer li {
 
 footer a {
     color: #fff;
+}
+
+.bg-light-green {
+    background-color: #4E9374;
+}
+
+footer {
+    background-color: #20734C;
 }
 
 /* ----- IMAGES ----- */
