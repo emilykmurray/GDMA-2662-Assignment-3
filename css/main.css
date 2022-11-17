@@ -30,7 +30,6 @@
 /* ----------- UNIVERSAL ------------- */
 
 * {
-        font-family: 'Roboto Slab', 'Georgia', serif;
         -moz-box-sizing: border-box;
         -o-box-sizing: border-box;
         -ms-box-sizing: border-box;
@@ -44,7 +43,15 @@
 
 /* ----- TYPOGRAPHY ----- */
 
+h1 {
+    color: #fff;
+    text-align: center;
+}
 
+a,
+a:hover {
+    text-decoration: none;
+}
 
 /*--------------------------------------------------------------
     5.0 - OBJECTS
@@ -54,6 +61,7 @@
 
 .wrapper {
         width: 93%;
+        margin: 0 auto;
 }
 
 .row {
@@ -220,8 +228,49 @@
     6.0 - COMPONENTS
 -------------------------------------------------------------- */
 
+.bg-light-green {
+    background-color: #4E9374;
+}
 
+footer {
+    background-color: #20734C;
+}
 
+/* ----- NAVIGATION ----- */
+
+nav li {
+    display: inline-block;
+}
+
+header a {
+    color: #fff;
+}
+
+#home nav {
+    text-align: right;
+}
+
+/* ----- FOOTER ----- */
+
+footer li {
+    display: inline-block;
+    text-align: center;
+}
+
+footer a {
+    color: #fff;
+}
+
+/* ----- IMAGES ----- */
+
+#home {
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    background: url("../img/snowy-mountain.jpg") no-repeat center;
+    background-size: cover;
+}
 
 /*--------------------------------------------------------------
     7.0 - UTILITIES
