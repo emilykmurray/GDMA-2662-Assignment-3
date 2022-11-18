@@ -42,23 +42,60 @@
     4.0 - ELEMENTS
 -------------------------------------------------------------- */
 
+ul {
+    margin-top: 0;
+}
+
 /* ----- TYPOGRAPHY ----- */
+
+
+h2,
+p,
+#home span {
+    font-family: 'EB Garamond', serif;
+}
+
+h1,
+h3,
+nav li,
+footer li,
+.btn {
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+h3 {
+    text-transform: uppercase;
+}
 
 h1 {
     color: #fff;
     text-align: center;
+    font-size: 5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: .2rem;
+    padding: 1.5em;
 }
 
-h1, 
-h2,
-p {
-    font-family: 'EB Garamond', serif;
+h2 {
+    font-size: 2rem;
 }
 
 h3 {
-    font-family: 'Montserrant', sans-serif;
-    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: .3rem;
+    font-weight: 600;
+    color: #C4C4C4;
 }
+
+p {
+    line-height: 1.8em;
+    font-size: 1.2rem;
+}
+
+/* ----- ANCHORS ----- */
+
 
 a,
 a:hover {
@@ -189,12 +226,12 @@ a:hover {
         }
 
         [class*='col-'] {
-                padding: 8px;
+                padding: 5px;
         }
 
         [class*='col-'] [class*='col-'] {
-                margin-left: -8px;
-                margin-right: -8px;
+                margin-left: -5px;
+                margin-right: -5px;
         }
 
     .col-lg-1 {
@@ -243,31 +280,53 @@ a:hover {
 
 #conservation {
     text-align: center;
-    margin: 0 auto;
 }
+
 
 #conservation > section {
     margin: 0 auto;
 }
 
+
 /* ----- HERO ----- */
+
+header a {
+    color: #fff;
+    font-weight: 500;
+    font-size: .9rem;
+    padding: .4em .9em;
+}
+
+header a:hover {
+    border: 1px solid #fff;
+    border-radius: 1.5em;
+    padding: .4em .9em;
+}
 
 #home span {
     font-style: italic;
+    text-transform: lowercase;
+    font-size: 3.5rem;
+    font-weight: 400;
+    letter-spacing: 0;
+    color: #fff;
 }
 
 /* ----- NAVIGATION ----- */
 
 nav li {
     display: inline-block;
-}
-
-header a {
-    color: #fff;
+    text-transform: uppercase;
 }
 
 #home nav {
     text-align: right;
+    padding-top: 1em;
+
+}
+
+#home > div {
+    padding-top: 1em;
 }
 
 /* ----- FOOTER ----- */
@@ -275,18 +334,30 @@ header a {
 footer li {
     display: inline-block;
     text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
 }
 
 footer a {
     color: #fff;
+    font-weight: 500;
+    font-size: .9rem;
 }
 
 .bg-light-green {
     background-color: #4E9374;
+    text-align: center;
+    margin: 3em 0;
+    padding: .8em;
 }
 
 footer {
     background-color: #20734C;
+    padding-bottom: 3em;
+}
+
+footer ul {
+    margin: 0 auto;
 }
 
 /* ----- IMAGES ----- */
@@ -304,3 +375,16 @@ footer {
     7.0 - UTILITIES
 -------------------------------------------------------------- */
 
+[class^="fa"] {
+    font-size: 1.5rem;
+} 
+
+.btn {
+        text-transform: uppercase;
+        font-size: .75rem;
+        font-weight: 500;
+        background-color: #4E9374;
+        border-radius: 1.5em;
+        padding: .7em 1.5em;
+        color: #fff;
+}
