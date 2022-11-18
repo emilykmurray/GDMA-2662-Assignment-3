@@ -51,7 +51,7 @@ ul {
 
 h2,
 p,
-#home span {
+#home-hero span {
     font-family: 'EB Garamond', serif;
 }
 
@@ -64,6 +64,7 @@ footer li,
 
 }
 
+h1,
 h3 {
     text-transform: uppercase;
 }
@@ -71,34 +72,55 @@ h3 {
 h1 {
     color: #fff;
     text-align: center;
-    font-size: 5rem;
+    font-size: 2rem;
     text-transform: uppercase;
     font-weight: 700;
     letter-spacing: .2rem;
-    padding: 1.5em;
+    margin-bottom: 0;
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: 1.5rem;
+    margin-top: 3em;
+    margin-bottom: .4em;
 }
 
 h3 {
     font-size: 1rem;
     letter-spacing: .3rem;
-    font-weight: 600;
+    font-weight: 700;
     color: #C4C4C4;
 }
 
 p {
-    line-height: 1.8em;
-    font-size: 1.2rem;
+    line-height: 1.7em;
+    font-size: 1.1rem;
+    letter-spacing: .04rem;
+}
+
+@media screen and (min-width: 1024px) {
+    h1 {
+        font-size: 5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+
+    p {
+        line-height: 1.8em;
+        font-size: 1.2rem;
+    }
 }
 
 /* ----- ANCHORS ----- */
 
 
-a,
-a:hover {
+a {
     text-decoration: none;
 }
 
@@ -277,6 +299,163 @@ a:hover {
     6.0 - COMPONENTS
 -------------------------------------------------------------- */
 
+.btn {
+    text-transform: uppercase;
+    font-size: .8rem;
+    font-weight: 600;
+    background-color: #4E9374;
+    border-radius: 1.5em;
+    padding: .7em 1.5em;
+    color: #fff;
+}
+
+/* ----- HERO ----- */
+
+header img {
+    width: 140px;
+    padding-top: 1.5em;
+}
+
+header .wrapper {
+    text-align: center;
+}
+
+header a {
+    color: #fff;
+    font-weight: 500;
+    font-size: .9rem;
+    padding: .4em .9em;
+}
+
+header p {
+    text-align: center;
+}
+
+header li:last-child {
+    border: 1px solid #fff;
+    border-radius: 1.5em;
+    padding: .3em .5em;
+}
+
+header li:last-child a:hover {
+    border-radius: 1.5em;
+    background: #fff;
+    padding: .3em 1.5em;
+    color: #20734C;
+}
+
+#home-hero > div:last-child {
+    padding: 4em 0 7em;
+}
+
+#home-hero span {
+    font-style: italic;
+    text-transform: lowercase;
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 0;
+    color: #fff;
+}
+
+@media screen and (min-width: 1024px) {
+
+    header img {
+        width: 200px;
+    }
+
+    #home-hero span {
+        font-size: 3.5rem;
+    }
+
+    #home-hero > div:last-child {
+        padding: 11em 0 8em;
+    }
+
+    header .wrapper {
+        text-align: left;
+    }
+}
+
+/* ----- ABOUT ----- */
+
+#about-hero > div:last-child{
+    padding: 3em 0 12em;
+   }
+
+/* ----- TAKE ACTION ----- */
+
+#action-hero > div:last-child{
+    padding: 3em 0 12em;
+   }
+
+/* ----- NAVIGATION ----- */
+
+#home-hero nav,
+#about-hero nav,
+#action-hero nav {
+    text-align: right;
+    padding-top: 1em;
+}
+
+nav li {
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+/* ----- FOOTER ----- */
+
+footer li {
+    display: inline-block;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    line-height: 2.2em;
+}
+
+footer a {
+    color: #fff;
+    font-weight: 500;
+    font-size: .9rem;
+    font-style: normal;
+}
+
+footer a:hover {
+    border-bottom: .5px solid #fff;
+    padding-bottom: .5em;
+}
+
+footer {
+    background-color: #20734C;
+    padding-bottom: 1em;
+}
+
+footer ul {
+    margin: 0 auto;
+}
+
+.bg-light-green {
+    background-color: #4E9374;
+    text-align: center;
+    margin: 5em 0 2em;
+    padding: 0.3em 0 0; 
+}
+
+
+@media screen and (min-width: 1024px) {
+    footer {
+        background-color: #20734C;
+        padding-bottom: 3em;
+    }
+
+    .bg-light-green {
+        background-color: #4E9374;
+        text-align: center;
+        margin: 3em 0;
+        padding: .8em;
+    }
+}
+
+/* ----- CONSERVATION ----- */
 
 #conservation {
     text-align: center;
@@ -287,82 +466,24 @@ a:hover {
     margin: 0 auto;
 }
 
-
-/* ----- HERO ----- */
-
-header a {
-    color: #fff;
-    font-weight: 500;
-    font-size: .9rem;
-    padding: .4em .9em;
+#conservation section:first-child {
+    margin-bottom: 3em;
 }
 
-header a:hover {
-    border: 1px solid #fff;
-    border-radius: 1.5em;
-    padding: .4em .9em;
+#conservation img {
+    width: 344px;
 }
 
-#home span {
-    font-style: italic;
-    text-transform: lowercase;
-    font-size: 3.5rem;
-    font-weight: 400;
-    letter-spacing: 0;
-    color: #fff;
-}
 
-/* ----- NAVIGATION ----- */
-
-nav li {
-    display: inline-block;
-    text-transform: uppercase;
-}
-
-#home nav {
-    text-align: right;
-    padding-top: 1em;
-
-}
-
-#home > div {
-    padding-top: 1em;
-}
-
-/* ----- FOOTER ----- */
-
-footer li {
-    display: inline-block;
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: 600;
-}
-
-footer a {
-    color: #fff;
-    font-weight: 500;
-    font-size: .9rem;
-}
-
-.bg-light-green {
-    background-color: #4E9374;
-    text-align: center;
-    margin: 3em 0;
-    padding: .8em;
-}
-
-footer {
-    background-color: #20734C;
-    padding-bottom: 3em;
-}
-
-footer ul {
-    margin: 0 auto;
+@media screen and (min-width: 1024px) {
+    #conservation img {
+        width: 400px;
+    }
 }
 
 /* ----- IMAGES ----- */
 
-#home {
+#home-hero {
     -moz-background-size: cover;
     -webkit-background-size: cover;
     -o-background-size: cover;
@@ -371,20 +492,29 @@ footer ul {
     background-size: cover;
 }
 
+#about-hero {
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    background: url("../img/mountain.jpg") no-repeat center;
+    background-size: cover;
+}
+
+#action-hero {
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    background: url("../img/forest.jpg") no-repeat center;
+    background-size: cover;
+}
+
 /*--------------------------------------------------------------
     7.0 - UTILITIES
 -------------------------------------------------------------- */
 
 [class^="fa"] {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    margin: 0 .5em;
 } 
-
-.btn {
-        text-transform: uppercase;
-        font-size: .75rem;
-        font-weight: 500;
-        background-color: #4E9374;
-        border-radius: 1.5em;
-        padding: .7em 1.5em;
-        color: #fff;
-}
