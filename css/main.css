@@ -44,18 +44,26 @@
 
 ul {
     margin-top: 0;
+    padding-left: 0;
+}
+
+blockquote {
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    text-align: center;
 }
 
 /* ----- TYPOGRAPHY ----- */
 
 
-h2,
 p,
-#home-hero span {
+#hero-home span {
     font-family: 'EB Garamond', serif;
 }
 
 h1,
+h2,
+#hero-home p,
 h3,
 nav li,
 footer li,
@@ -65,31 +73,18 @@ footer li,
 }
 
 h1,
-h3 {
+h2 {
     text-transform: uppercase;
 }
 
-h1 {
-    color: #fff;
-    text-align: center;
-    font-size: 2rem;
-    text-transform: uppercase;
-    font-weight: 700;
-    letter-spacing: .2rem;
-    margin-bottom: 0;
-}
 
 h2 {
-    font-size: 1.5rem;
-    margin-top: 3em;
-    margin-bottom: .4em;
-}
-
-h3 {
     font-size: 1rem;
     letter-spacing: .3rem;
     font-weight: 700;
     color: #C4C4C4;
+    margin-top: 1.6em;
+
 }
 
 p {
@@ -100,15 +95,7 @@ p {
 
 @media screen and (min-width: 1024px) {
 
-    h1 {
-        font-size: 5rem;
-    }
-
     h2 {
-        font-size: 2rem;
-    }
-
-    h3 {
         font-size: 1rem;
     }
 
@@ -119,7 +106,6 @@ p {
 }
 
 /* ----- ANCHORS ----- */
-
 
 a {
     text-decoration: none;
@@ -250,7 +236,7 @@ li a:hover {
 
 @media screen and (min-width: 1024px) {
         .wrapper {
-                width: 80%;
+                width: 75%;
         }
 
         [class*='col-'] {
@@ -305,6 +291,19 @@ li a:hover {
     6.0 - COMPONENTS
 -------------------------------------------------------------- */
 
+#conservation div:first-child p:first-child,
+#what-we-do p,
+#make-a-difference p {
+    font-size: 2rem;
+    line-height: 1.3em;
+    margin: 3em 0 0;
+}
+
+#conservation,
+#make-a-difference {
+    text-align: center;
+}
+
 .btn {
     text-transform: uppercase;
     font-size: .8rem;
@@ -319,7 +318,7 @@ li a:hover {
 
 header img {
     width: 140px;
-    padding-top: 1.5em;
+    margin-top: .5em;
 }
 
 header .wrapper {
@@ -330,28 +329,18 @@ header a {
     color: #fff;
     font-weight: 500;
     font-size: .9rem;
-    margin-left: 2em;
+    margin: 0 1em;
 }
 
 header p {
     text-align: center;
 }
 
-/* header li:last-child {
-    border: 1px solid #fff;
-    border-radius: 1.5em;
-    padding: .3em .5em;
-} */
-
 header li:last-child a:hover {
     text-decoration: none;
 }
 
-#home-hero > div:last-child {
-    padding: 4em 0 7em;
-}
-
-#home-hero span {
+#hero-home span {
     font-style: italic;
     text-transform: lowercase;
     font-size: 2rem;
@@ -360,44 +349,160 @@ header li:last-child a:hover {
     color: #fff;
 }
 
+#hero-home .btn {
+    font-size: .8em;
+    font-weight: 600;
+    letter-spacing: 0;
+    padding: .5em 1em;
+}
+
+#hero-home p,
+#hero-about h1,
+#hero-action h1 {
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: .1rem;
+    margin-bottom: 0;
+}
+
+#hero-home p:nth-child(2) {
+    font-size: 2em;
+    padding: .6em 0 0;
+    line-height: 1.3em;
+}
+
+#hero-home p:last-child {
+    padding-bottom: 6em;
+}
+
+#hero-home h1 {
+    margin: 0;
+}
+
 @media screen and (min-width: 1024px) {
+
+    header a {
+        margin: 0;
+    }
 
     header img {
         width: 200px;
+        margin-top: 0;
+        padding-top: .5em;
     }
 
-    #home-hero span {
+    #hero-home span {
         font-size: 3.5rem;
-    }
-
-    #home-hero > div:last-child {
-        padding: 11em 0 8em;
     }
 
     header .wrapper {
         text-align: left;
     }
+
+    header li {
+        margin-left: 2em;
+    }
+
+    #hero-home .btn {
+        font-size: .2em;
+        font-weight: 600;
+        letter-spacing: 0;
+        padding: .5em 1em;
+    }
+
+    #hero-home p {
+        font-size: 5rem;
+        padding: 0;
+    }
+
+    #hero-home p:last-child {
+        padding-bottom: 1em;
+    }
+
+    #hero-home p:nth-child(2) {
+        font-size: 5em;
+        padding: .6em 0 0;
+        line-height: 1em;
+    }
 }
 
 /* ----- ABOUT ----- */
 
-#about-hero > div:last-child{
-    padding: 3em 0 12em;
+#hero-about h1 {
+    padding: 0 0 2em;
+    font-size: 2.6rem;
+}
+
+#position-sticky {
+    position: sticky;
+    top: 0;
+    left: 0;
+    margin-top: 4em;
+    background-color: #fff;
+}
+
+#position-sticky {
+    text-align: center;
+}
+
+/* .col-lg-8 {
+    margin-top: 4em;
+} */
+
+   @media screen and (min-width: 1024px) {
+    #hero-about > div:last-child{
+        padding: 0em 0 11em;
+       }
+    
+    #hero-about h1 {
+        padding: 1em 0 .6em;
+        font-size: 5rem;
+    }
+
+    #position-sticky li {
+        display: block;
+    }
+
+    #position-sticky {
+        text-align: left;
+    }
+
    }
 
 /* ----- TAKE ACTION ----- */
 
-#action-hero > div:last-child{
-    padding: 3em 0 12em;
+#hero-action h1 {
+    padding: 0 0 2em;
+    font-size: 2.6rem;
+}
+
+#make-a-difference + div {
+    text-align: center;
+    margin: 5em 0;
+}
+
+   @media screen and (min-width: 1024px) {
+    #hero-action > div:last-child{
+        padding: 0em 0 11em;
+       }
+
+       #hero-action h1 {
+        padding: 1em 0 .6em;
+        font-size: 5rem;
+    }
    }
+
 
 /* ----- NAVIGATION ----- */
 
-#home-hero nav,
-#about-hero nav,
-#action-hero nav {
-    text-align: right;
-    padding-top: 2.2em;
+#hero-home nav,
+#hero-about nav,
+#hero-action nav {
+    text-align: center;
+    padding-top: 1em;
+    margin: 0 auto;
 }
 
 nav li {
@@ -405,34 +510,43 @@ nav li {
     text-transform: uppercase;
 }
 
+@media screen and (min-width: 1024px) {
+    #hero-home nav,
+    #hero-about nav,
+    #hero-action nav {
+        text-align: right;
+        padding-top: 2em;
+}
+}
+
 /* ----- FOOTER ----- */
 
-footer li {
-    display: inline-block;
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: 600;
-    line-height: 2.2em;
+footer {
+    background-color: #1D6D49; 
+    padding-bottom: 1em;
 }
 
 footer a {
     color: #fff;
-    font-weight: 500;
     font-size: .9rem;
     font-style: normal;
+    font-weight: 500;
 }
 
-footer {
-    background-color: #20734C;
-    padding-bottom: 1em;
+footer li {
+    display: inline-block;
+    text-transform: uppercase;
+    line-height: 2.2em;
 }
 
-footer ul {
-    margin: 0 auto;
+footer ul:first-child {
+    display: inline-block;
+    margin-bottom: 0;
+    padding: 0;
 }
 
 footer > div:first-child {
-    background-color: #4E9374;
+    background-color: #4e9374;
     text-align: center;
     margin: 5em 0 2em;
     padding: 0.3em 0 0; 
@@ -445,9 +559,20 @@ footer > div:first-child {
         padding-bottom: 3em;
     }
 
+    footer li {
+        display: inline-block;
+    }
+
+    address a {
+        margin: 0 1em;
+    }
+
+    address {
+        text-align: center;
+    }
+
     footer > div:first-child {
         background-color: #4E9374;
-        text-align: center;
         margin: 3em 0;
         padding: .8em;
     }
@@ -455,33 +580,79 @@ footer > div:first-child {
 
 /* ----- CONSERVATION ----- */
 
-#conservation {
-    text-align: center;
-}
-
-
-#conservation > section {
-    margin: 0 auto;
-}
-
-#conservation section:first-child {
-    margin-bottom: 3em;
-}
-
 #conservation img {
     width: 344px;
 }
 
+#conservation section {
+    margin-top: 4em;
+}
+
+#conservation section:first-child div:first-child {
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    background: url("../img/mountain.jpg") no-repeat center;
+    background-size: cover;
+    padding: 7em 8em;
+}
+
+#conservation section:last-child div:first-child {
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    background: url("../img/forest.jpg") no-repeat center;
+    background-size: cover;
+    padding: 7em 8em;
+}
 
 @media screen and (min-width: 1024px) {
     #conservation img {
         width: 400px;
     }
+
+    /* #conservation div:first-child p:first-child,
+    #what-we-do p {
+        font-size: 2rem;
+        line-height: 1.3em;
+    } */
+
+    #conservation section:first-child div:first-child {
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        -o-background-size: cover;
+        -ms-background-size: cover;
+        background: url("../img/mountain.jpg") no-repeat center;
+        background-size: cover;
+        padding: 9em 11em;
+    }
+    
+    #conservation section:last-child div:first-child {
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        -o-background-size: cover;
+        -ms-background-size: cover;
+        background: url("../img/forest.jpg") no-repeat center;
+        background-size: cover;
+        padding: 9em 11em;
+    }
+}
+
+/* ----- ACHIEVEMENTS ----- */
+
+#our-achievements > div > div:last-child {
+    margin-top: 2.5em;
+}
+
+#our-achievements {
+    list-style-image:url(../img/tree.svg);
 }
 
 /* ----- IMAGES ----- */
 
-#home-hero {
+#hero-home {
     -moz-background-size: cover;
     -webkit-background-size: cover;
     -o-background-size: cover;
@@ -490,7 +661,7 @@ footer > div:first-child {
     background-size: cover;
 }
 
-#about-hero {
+#hero-about {
     -moz-background-size: cover;
     -webkit-background-size: cover;
     -o-background-size: cover;
@@ -499,7 +670,7 @@ footer > div:first-child {
     background-size: cover;
 }
 
-#action-hero {
+#hero-action {
     -moz-background-size: cover;
     -webkit-background-size: cover;
     -o-background-size: cover;
@@ -516,3 +687,16 @@ footer > div:first-child {
     font-size: 1.2rem;
     margin: 0 .5em;
 } 
+
+.col-center {
+    margin: 0 auto;
+}
+
+.sr-only {
+    position:absolute;
+    left:-10000px;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+}
